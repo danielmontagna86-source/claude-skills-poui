@@ -1,0 +1,26 @@
+<section class="page-header">
+  <h1>Monitoramento de títulos a pagar</h1>
+  <p>Exemplo de tabela PO UI para fluxo financeiro integrado ao Protheus.</p>
+</section>
+
+<po-table
+  #table
+  p-sort
+  p-striped
+  p-selectable
+  [p-height]="420"
+  [p-columns]="columns"
+  [p-items]="items"
+  [p-actions]="actions"
+  [p-loading]="loading"
+  [p-literals]="literals"
+  (p-selected)="onSelected($event)"
+  (p-unselected)="onUnselected($event)"
+  (p-sort-by)="onSort($event)"
+  (p-show-more)="onShowMore()">
+</po-table>
+
+<section class="selection" *ngIf="selectedItem">
+  <strong>Selecionado:</strong>
+  {{ selectedItem.branch }} - {{ selectedItem.supplier }} - {{ selectedItem.document }}
+</section>
