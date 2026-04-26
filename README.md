@@ -1,60 +1,59 @@
 # Claude Skills PO UI
 
-Projeto com skills, prompts e referências para usar IA como apoio técnico na criação, análise e evolução de interfaces com **PO UI**, especialmente em cenários ligados ao ecossistema **TOTVS Protheus / ADVPL**.
+Projeto com skills, prompts e referencias para usar IA como apoio tecnico na criacao, analise e evolucao de interfaces com PO UI, especialmente em cenarios ligados ao ecossistema TOTVS Protheus e ADVPL.
 
-O objetivo não é apenas gerar componentes isolados. A proposta é transformar documentação técnica de PO UI em um conjunto reutilizável de instruções para acelerar análise, desenho de telas, padronização visual, revisão de UX e geração assistida de código.
+O objetivo nao e apenas gerar componentes isolados. A proposta e transformar documentacao tecnica de PO UI em um conjunto reutilizavel de instrucoes para acelerar analise, desenho de telas, padronizacao visual, revisao de UX e geracao assistida de codigo.
 
 ## Objetivo
 
-Este repositório organiza uma base de conhecimento para agentes de IA capazes de:
+Este repositorio organiza uma base de conhecimento para agentes de IA capazes de:
 
-- Interpretar documentação de componentes PO UI.
+- Interpretar documentacao de componentes PO UI.
 - Sugerir telas e fluxos com foco em produtividade operacional.
-- Apoiar analistas ADVPL na modernização de interfaces.
-- Criar padrões reutilizáveis para listas, formulários, filtros e ações.
-- Reduzir retrabalho na leitura manual da documentação.
-- Ajudar na transição de telas legadas para experiências mais modernas.
+- Apoiar analistas ADVPL na modernizacao de interfaces.
+- Criar padroes reutilizaveis para listas, formularios, filtros e acoes.
+- Reduzir retrabalho na leitura manual da documentacao.
+- Ajudar na transicao de telas legadas para experiencias mais modernas.
 
 ## Estrutura
 
-```text
-claude-skills-poui/
-├── skills/
-│   └── poui/
-│       ├── SKILL.md
-│       ├── references/
-│       │   └── po-ui-context.md
-│       └── examples/
-│           ├── screen-analysis.md
-│           ├── po-table-use-cases.md
-│           └── advpl-to-poui-modernization.md
-├── prompts/
-│   ├── analista-poui-senior.md
-│   └── gerador-telas-poui.md
-└── docs/
-    └── arquitetura.md
-```
+- .gitignore
+- LICENSE
+- README.md
+- skills/poui/SKILL.md
+- skills/poui/references/po-ui-context.md
+- skills/poui/examples/screen-analysis.md
+- skills/poui/examples/po-table-use-cases.md
+- skills/poui/examples/advpl-to-poui-modernization.md
+- skills/poui/examples/official-po-table-reference.md
+- prompts/analista-poui-senior.md
+- prompts/gerador-telas-poui.md
+- docs/arquitetura.md
 
 ## Como usar
 
-Use os arquivos em `skills/poui` como contexto para um agente de IA. O agente deve atuar como um analista técnico sênior, interpretando a necessidade de negócio antes de sugerir componentes.
+Use os arquivos em skills/poui como contexto para um agente de IA. O agente deve atuar como um analista tecnico senior, interpretando a necessidade de negocio antes de sugerir componentes.
 
 Exemplo de uso:
 
-```text
-Você é um especialista em PO UI e Protheus.
-Analise este processo financeiro e proponha uma tela moderna com filtros, tabela, ações e validações.
-Use a skill PO UI deste repositório como referência.
-```
+Voce e um especialista em PO UI e Protheus. Analise este processo financeiro e proponha uma tela moderna com filtros, tabela, acoes e validacoes. Use a skill PO UI deste repositorio como referencia.
+
+## Referencia oficial usada
+
+O exemplo skills/poui/examples/official-po-table-reference.md foi criado para orientar o uso profissional de tabelas PO UI a partir da documentacao oficial em formato LLM do PO UI.
 
 ## Foco do projeto
 
 - PO UI aplicado ao mundo real.
-- Ganho de produtividade para analistas técnicos.
+- Ganho de produtividade para analistas tecnicos.
 - Uso de IA como copiloto de arquitetura e interface.
-- Padronização de telas corporativas.
-- Documentação reaproveitável para agentes.
+- Padronizacao de telas corporativas.
+- Documentacao reaproveitavel para agentes.
+
+## Licenca
+
+Este projeto utiliza licenca MIT.
 
 ## Status
 
-Base inicial do projeto.
+Base inicial profissional do projeto criada.
