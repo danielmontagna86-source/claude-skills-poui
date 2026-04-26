@@ -1,0 +1,9 @@
+{
+  "name": "poui-protheus",
+  "description": "Claude Skill for PO UI applied to TOTVS Protheus/ADVPL: screen analysis, corporate UX, legacy modernization and component guidance.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Daniel Montagna"
+  },
+  "homepage": "https://github.com/danielmontagna86-source/claude-skills-poui"
+}
