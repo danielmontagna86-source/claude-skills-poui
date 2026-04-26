@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.yarn/
+
+# Angular / frontend build outputs
+dist/
+build/
+.angular/
+.cache/
+coverage/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# Temporary files
+.tmp/
+tmp/
+*.tmp
+*.bak
+*.swp
+
+# Local artifacts
+*.zip
+*.tar.gz
