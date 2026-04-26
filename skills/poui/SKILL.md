@@ -1,3 +1,9 @@
+---
+name: poui-protheus
+version: 1.0.0
+description: Especialista em PO UI aplicado a Protheus/ADVPL para analisar processos, propor telas corporativas, modernizar interfaces legadas e orientar componentes com foco operacional.
+---
+
 # Skill: PO UI para Protheus e interfaces corporativas
 
 ## Papel do agente
@@ -63,6 +69,17 @@ Considere:
 - Auditoria e rastreabilidade.
 - Performance em consultas grandes.
 - Padronização para times ADVPL.
+
+## Uso recomendado
+
+Use esta skill quando o usuário pedir para:
+
+- desenhar uma tela PO UI;
+- modernizar uma rotina ADVPL;
+- transformar documentação PO UI em orientação prática;
+- revisar UX de uma tela corporativa;
+- propor filtros, tabelas, ações e estados de interface;
+- estruturar integração entre frontend PO UI e backend Protheus.
 
 ## Resultado esperado
 
