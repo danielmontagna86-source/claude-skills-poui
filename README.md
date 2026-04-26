@@ -1,59 +1,109 @@
 # Claude Skills PO UI
 
-Projeto com skills, prompts e referencias para usar IA como apoio tecnico na criacao, analise e evolucao de interfaces com PO UI, especialmente em cenarios ligados ao ecossistema TOTVS Protheus e ADVPL.
+Skill para Claude Code focada em **PO UI**, **Angular**, **TOTVS Protheus** e **ADVPL**.
 
-O objetivo nao e apenas gerar componentes isolados. A proposta e transformar documentacao tecnica de PO UI em um conjunto reutilizavel de instrucoes para acelerar analise, desenho de telas, padronizacao visual, revisao de UX e geracao assistida de codigo.
+O objetivo é reduzir código inventado por IA ao gerar telas com `@po-ui/ng-components`, especialmente em cenários corporativos com tabelas, filtros, ações, status, backend, auditoria e performance.
 
-## Objetivo
+## Problema que resolve
 
-Este repositorio organiza uma base de conhecimento para agentes de IA capazes de:
+Quem usa PO UI com IA conhece alguns erros comuns:
 
-- Interpretar documentacao de componentes PO UI.
-- Sugerir telas e fluxos com foco em produtividade operacional.
-- Apoiar analistas ADVPL na modernizacao de interfaces.
-- Criar padroes reutilizaveis para listas, formularios, filtros e acoes.
-- Reduzir retrabalho na leitura manual da documentacao.
-- Ajudar na transicao de telas legadas para experiencias mais modernas.
+- input que não existe;
+- output errado;
+- tipo de coluna inconsistente;
+- método inventado no `ViewChild`;
+- exemplo Angular visualmente bonito, mas frágil;
+- tela gerada sem considerar backend, permissão e volume de dados.
+
+Esta skill força o agente a consultar referências locais antes de gerar código.
+
+## O que existe hoje
+
+- `SKILL.md` com regras anti-hallucination.
+- Referência curada para `po-table`.
+- Exemplo Angular mínimo de `po-table`.
+- Prompts para análise e geração de telas PO UI.
+- Guia de contribuição para novos componentes.
+- Roadmap para `po-page-list`, `po-modal` e outros componentes.
+- Manifestos para Claude Code plugin/marketplace.
+
+## Instalação no Claude Code
+
+```bash
+/plugin marketplace add danielmontagna86-source/claude-skills-poui
+```
+
+Depois, instale o plugin disponível no marketplace adicionado conforme o fluxo do Claude Code.
 
 ## Estrutura
 
-- .gitignore
-- LICENSE
-- README.md
-- skills/poui/SKILL.md
-- skills/poui/references/po-ui-context.md
-- skills/poui/examples/screen-analysis.md
-- skills/poui/examples/po-table-use-cases.md
-- skills/poui/examples/advpl-to-poui-modernization.md
-- skills/poui/examples/official-po-table-reference.md
-- prompts/analista-poui-senior.md
-- prompts/gerador-telas-poui.md
-- docs/arquitetura.md
+```text
+claude-skills-poui/
+├── .claude-plugin/
+│   ├── marketplace.json
+│   └── plugin.json
+├── examples/
+│   └── angular-po-table-demo/
+│       ├── README.md
+│       ├── payable-titles-table.component.html
+│       ├── payable-titles-table.component.scss
+│       └── payable-titles-table.component.ts
+├── skills/
+│   └── poui/
+│       ├── SKILL.md
+│       ├── references/
+│       │   ├── po-ui-context.md
+│       │   └── po-table-api.md
+│       └── examples/
+│           ├── advpl-to-poui-modernization.md
+│           ├── official-po-table-reference.md
+│           ├── po-table-use-cases.md
+│           └── screen-analysis.md
+├── prompts/
+│   ├── analista-poui-senior.md
+│   └── gerador-telas-poui.md
+├── docs/
+│   ├── arquitetura.md
+│   ├── awesome-claude-skills-submission.md
+│   └── roadmap.md
+├── CONTRIBUTING.md
+├── LICENSE
+└── README.md
+```
 
 ## Como usar
 
-Use os arquivos em skills/poui como contexto para um agente de IA. O agente deve atuar como um analista tecnico senior, interpretando a necessidade de negocio antes de sugerir componentes.
+Exemplo de prompt:
 
-Exemplo de uso:
+```text
+Use a skill PO UI.
+Crie um po-table para títulos a pagar com seleção, ações, status financeiro, status de integração e carregamento incremental.
+Não invente propriedades. Consulte a referência local antes de responder.
+```
 
-Voce e um especialista em PO UI e Protheus. Analise este processo financeiro e proponha uma tela moderna com filtros, tabela, acoes e validacoes. Use a skill PO UI deste repositorio como referencia.
-
-## Referencia oficial usada
-
-O exemplo skills/poui/examples/official-po-table-reference.md foi criado para orientar o uso profissional de tabelas PO UI a partir da documentacao oficial em formato LLM do PO UI.
-
-## Foco do projeto
+## Foco técnico
 
 - PO UI aplicado ao mundo real.
-- Ganho de produtividade para analistas tecnicos.
-- Uso de IA como copiloto de arquitetura e interface.
-- Padronizacao de telas corporativas.
-- Documentacao reaproveitavel para agentes.
+- Angular com tipos mais seguros.
+- Redução de propriedades inventadas.
+- Ganho de produtividade para analistas técnicos.
+- Modernização de telas ADVPL.
+- Padronização de telas corporativas.
+- Backend, permissão, auditoria e performance.
 
-## Licenca
+## Próximos componentes
 
-Este projeto utiliza licenca MIT.
+- `po-page-list`
+- `po-modal`
+- `po-page-dynamic-table`
+- `po-page-dynamic-edit`
 
-## Status
+Consulte `docs/roadmap.md`.
 
-Base inicial profissional do projeto criada.
+## Contribuição
+
+Consulte `CONTRIBUTING.md` para adicionar novas referências de componentes PO UI.
+
+## Licença
+
+MIT.
