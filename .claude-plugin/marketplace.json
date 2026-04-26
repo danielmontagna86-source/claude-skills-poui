@@ -1,0 +1,13 @@
+{
+  "name": "claude-skills-poui",
+  "owner": {
+    "name": "Daniel Montagna"
+  },
+  "plugins": [
+    {
+      "name": "poui-protheus",
+      "source": ".",
+      "description": "Claude Skill for PO UI applied to TOTVS Protheus/ADVPL: screen analysis, corporate UX, legacy modernization and component guidance."
+    }
+  ]
+}
