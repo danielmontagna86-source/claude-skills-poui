@@ -27,6 +27,30 @@ Esta skill força o agente a consultar referências locais antes de gerar códig
 - Roadmap para `po-page-list`, `po-modal` e outros componentes.
 - Manifestos para Claude Code plugin/marketplace.
 
+## Coverage status
+
+### Current focus
+
+- `po-table`.
+- Local reference for common inputs, outputs and column patterns.
+- Typed Angular example with selection, actions, labels, currency/date columns and loading state.
+- Anti-hallucination rules for inputs, outputs, column types and `ViewChild` usage.
+- Protheus/ADVPL guidance for backend, auditability, permissions and performance.
+
+### Planned coverage
+
+- Deeper `po-table` API coverage.
+- CSS tokens validation.
+- Public methods validation.
+- `po-page-list`.
+- `po-modal`.
+- `po-page-dynamic-table`.
+- `po-page-dynamic-edit`.
+
+### Important note
+
+PO UI evolves across versions. Always compare the local references in this repository with the installed version of `@po-ui/ng-components` before using generated code in production.
+
 ## Instalação no Claude Code
 
 ```bash
