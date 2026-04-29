@@ -19,7 +19,7 @@ Community Skills > Individual Skills
 Adicionar abaixo de uma linha existente da tabela `Individual Skills`:
 
 ```markdown
-| **[poui-protheus](https://github.com/danielmontagna86-source/claude-skills-poui)** | PO UI and TOTVS Protheus/ADVPL skill for reducing hallucinated Angular code by using local component references, starting with `po-table`, plus examples for operational screens, backend concerns, auditability and performance. |
+| **[poui-protheus / po-table](https://github.com/danielmontagna86-source/claude-skills-poui)** | PO UI and Protheus/ADVPL skill that helps reduce hallucinated Angular code by using local `po-table` references, typed examples and anti-hallucination rules. |
 ```
 
 ## PR title
@@ -38,7 +38,7 @@ Adds `poui-protheus`, a Claude Skill focused on PO UI, Angular and TOTVS Protheu
 The skill helps reduce hallucinated Angular code by requiring Claude Code to consult local component references before generating examples. It currently focuses on `po-table` and includes:
 
 - `SKILL.md` with anti-hallucination rules;
-- curated local reference for `po-table` inputs, outputs and column patterns;
+- curated local reference for common `po-table` inputs, outputs and column patterns;
 - Angular example with selection, actions, labels, currency/date columns and loading state;
 - Protheus-oriented guidance for backend, auditability, permissions and performance;
 - contribution guide and roadmap for more PO UI components.
