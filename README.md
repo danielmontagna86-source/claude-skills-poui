@@ -23,7 +23,7 @@ Esta skill força o agente a consultar referências locais antes de gerar códig
 
 Versão atual: **v1.1.0**.
 
-Este repositório está pronto para uso como **skill de contexto para Claude Code** e como base de referência para geração assistida de telas PO UI.
+Este repositório está pronto para uso como **skill de contexto para Claude Code** e como **base de conhecimento multi-IA** para geração assistida de telas PO UI.
 
 Ele **não** é uma biblioteca Angular, não publica pacote `npm` e não substitui a validação no projeto real. O exemplo Angular incluído é propositalmente mínimo para servir como referência técnica e visual, não como aplicação completa.
 
@@ -45,6 +45,8 @@ PO UI evolui entre versões. Antes de usar código gerado em produção, compare
 - Referência curada para `po-table`.
 - Exemplo Angular mínimo de `po-table`.
 - Prompts para análise e geração de telas PO UI.
+- Guia multi-IA em `AI_USAGE.md`.
+- Prompts universais para ChatGPT, Gemini, Cursor, assistentes de código no VS Code e modelos locais.
 - Guia de contribuição para novos componentes.
 - Roadmap para `po-page-list`, `po-modal` e outros componentes.
 - Manifestos para Claude Code plugin/marketplace.
@@ -81,6 +83,24 @@ PO UI evolves across versions. Always compare the local references in this repos
 
 Depois, instale o plugin disponível no marketplace adicionado conforme o fluxo do Claude Code.
 
+## Uso com outras IAs
+
+Este repositório também pode ser usado como **pacote de contexto técnico** para outras IAs.
+
+Nesse modo, a IA não instala a skill nativamente. Ela usa os arquivos Markdown como base de conhecimento para reduzir alucinação ao gerar ou revisar código PO UI.
+
+Compatível como contexto para:
+
+- ChatGPT;
+- Gemini;
+- Cursor;
+- assistentes de código no VS Code;
+- Windsurf;
+- Continue.dev;
+- modelos locais.
+
+Consulte `AI_USAGE.md` e os prompts em `prompts/universal/`.
+
 ## Estrutura
 
 ```text
@@ -107,12 +127,20 @@ claude-skills-poui/
 │           └── screen-analysis.md
 ├── prompts/
 │   ├── analista-poui-senior.md
-│   └── gerador-telas-poui.md
+│   ├── gerador-telas-poui.md
+│   └── universal/
+│       ├── README.md
+│       ├── chatgpt.md
+│       ├── gemini.md
+│       ├── cursor.md
+│       ├── vscode-coding-assistant.md
+│       └── local-model.md
 ├── docs/
 │   ├── arquitetura.md
 │   ├── awesome-claude-skills-submission.md
 │   ├── github-publication-checklist.md
 │   └── roadmap.md
+├── AI_USAGE.md
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
 ├── LICENSE
