@@ -7,8 +7,8 @@ Prompts para usar este repositório como base de conhecimento em outras IAs alé
 - `chatgpt.md`: uso com ChatGPT.
 - `gemini.md`: uso com Gemini.
 - `cursor.md`: uso com Cursor.
-- `copilot.md`: uso com GitHub Copilot Chat.
-- `local-llm.md`: uso com LLM local, OpenRouter, Continue.dev ou ferramentas similares.
+- `vscode-coding-assistant.md`: uso com assistentes de código no VS Code.
+- `local-model.md`: uso com modelos locais, Continue.dev ou ferramentas similares.
 
 ## Regra central
 
