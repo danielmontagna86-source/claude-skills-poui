@@ -1,6 +1,6 @@
 # Multi-AI usage guide
 
-Este repositório foi criado como uma **Claude Code Skill**, mas também pode ser usado como **base de conhecimento multi-IA** para ChatGPT, Gemini, Cursor, GitHub Copilot Chat, Windsurf, Continue.dev, OpenRouter e modelos locais.
+Este repositório foi criado como uma **Claude Code Skill**, mas também pode ser usado como **base de conhecimento multi-IA** para ChatGPT, Gemini, Cursor, assistentes de código no VS Code, Windsurf, Continue.dev e modelos locais.
 
 ## Dois modos de uso
 
@@ -98,7 +98,7 @@ Recomendado:
 
 Prompt específico: `prompts/universal/cursor.md`.
 
-### GitHub Copilot Chat
+### Assistentes de código no VS Code
 
 Use para revisão incremental dentro do VS Code.
 
@@ -109,9 +109,9 @@ Recomendado:
 3. Peça mudanças pequenas e verificáveis.
 4. Não peça para gerar uma tela inteira sem contexto dos arquivos abertos.
 
-Prompt específico: `prompts/universal/copilot.md`.
+Prompt específico: `prompts/universal/vscode-coding-assistant.md`.
 
-### LLM local / OpenRouter / Continue.dev
+### Modelos locais / Continue.dev
 
 Use quando quiser um agente local ou barato para tarefas repetitivas.
 
@@ -122,7 +122,7 @@ Recomendado:
 3. Peça saída em etapas.
 4. Valide manualmente qualquer API não mapeada.
 
-Prompt específico: `prompts/universal/local-llm.md`.
+Prompt específico: `prompts/universal/local-model.md`.
 
 ## Cuidados
 
