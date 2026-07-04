@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-skills-poui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Marketplace for PO UI and Protheus Claude Code skills.",
   "owner": {
     "name": "Daniel Montagna"
@@ -11,7 +11,7 @@
       "name": "poui-protheus",
       "source": ".",
       "description": "Claude Skill for PO UI applied to TOTVS Protheus/ADVPL: screen analysis, corporate UX, legacy modernization and component guidance.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "development",
       "author": {
         "name": "Daniel Montagna"
