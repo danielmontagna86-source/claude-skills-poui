@@ -2,6 +2,8 @@
 
 Skill para Claude Code focada em **PO UI**, **Angular**, **TOTVS Protheus** e **ADVPL**.
 
+> Projeto comunitário e independente. Não é afiliado oficialmente à TOTVS, PO UI, Anthropic ou Claude.
+
 O objetivo é reduzir código inventado por IA ao gerar telas com `@po-ui/ng-components`, especialmente em cenários corporativos com tabelas, filtros, ações, status, backend, auditoria e performance.
 
 ## Problema que resolve
@@ -16,6 +18,26 @@ Quem usa PO UI com IA conhece alguns erros comuns:
 - tela gerada sem considerar backend, permissão e volume de dados.
 
 Esta skill força o agente a consultar referências locais antes de gerar código.
+
+## Status do projeto
+
+Versão atual: **v1.1.0**.
+
+Este repositório está pronto para uso como **skill de contexto para Claude Code** e como base de referência para geração assistida de telas PO UI.
+
+Ele **não** é uma biblioteca Angular, não publica pacote `npm` e não substitui a validação no projeto real. O exemplo Angular incluído é propositalmente mínimo para servir como referência técnica e visual, não como aplicação completa.
+
+## Versão de referência e validação
+
+Referências validadas inicialmente em:
+
+- Data de validação: **2026-07-04**.
+- Componente principal: `po-table`.
+- Fonte de referência local: `skills/poui/references/po-table-api.md`.
+- Fonte pública indicada na referência: `https://po-ui.io/llms-generated/po-table.md`.
+- Escopo: inputs comuns, outputs comuns, tipos de coluna, ações, eventos e padrões seguros de uso.
+
+PO UI evolui entre versões. Antes de usar código gerado em produção, compare as referências locais deste repositório com a versão instalada de `@po-ui/ng-components` no projeto.
 
 ## O que existe hoje
 
@@ -89,7 +111,9 @@ claude-skills-poui/
 ├── docs/
 │   ├── arquitetura.md
 │   ├── awesome-claude-skills-submission.md
+│   ├── github-publication-checklist.md
 │   └── roadmap.md
+├── CHANGELOG.md
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md
@@ -104,6 +128,16 @@ Use a skill PO UI.
 Crie um po-table para títulos a pagar com seleção, ações, status financeiro, status de integração e carregamento incremental.
 Não invente propriedades. Consulte a referência local antes de responder.
 ```
+
+## Quando usar esta skill
+
+Use quando precisar:
+
+- desenhar uma tela PO UI a partir de um requisito de negócio;
+- modernizar uma rotina ADVPL para uma interface web mais clara;
+- gerar `po-table` com seleção, ações, status, paginação ou carregamento incremental;
+- revisar se uma proposta de tela está operacional, auditável e simples;
+- conectar decisões de frontend com backend Protheus, permissões, auditoria e performance.
 
 ## Foco técnico
 
