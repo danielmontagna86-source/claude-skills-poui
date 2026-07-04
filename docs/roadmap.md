@@ -4,6 +4,8 @@ Este roadmap organiza a evolução das skills PO UI para Claude Code.
 
 ## Status atual
 
+Versão atual: **v1.1.0**.
+
 ### Disponível
 
 - Skill base `poui-protheus`.
@@ -12,6 +14,9 @@ Este roadmap organiza a evolução das skills PO UI para Claude Code.
 - Exemplo Angular mínimo com `po-table`.
 - Prompts para análise de tela e geração de tela PO UI.
 - Manifestos para Claude Code plugin/marketplace.
+- README preparado para divulgação pública.
+- Checklist de publicação no GitHub.
+- Changelog inicial.
 
 ## Próximos componentes
 
@@ -69,6 +74,15 @@ skills/poui/examples/<component>-use-cases.md
 - [ ] Criar orientações para Protheus.
 - [ ] Atualizar README.
 - [ ] Testar com Claude Code.
+
+## Próximas melhorias de publicação
+
+- [ ] Criar release `v1.1.0` no GitHub.
+- [ ] Preencher descrição e topics no painel About.
+- [ ] Validar instalação em ambiente real de Claude Code.
+- [ ] Adicionar screenshot ou GIF do exemplo Angular.
+- [ ] Criar exemplo com `po-page-list`.
+- [ ] Criar exemplo com `po-modal`.
 
 ## Prioridade
 
