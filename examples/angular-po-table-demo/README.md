@@ -8,7 +8,7 @@ O objetivo deste exemplo não é ser uma aplicação completa. Ele serve como re
 
 - `PoTableColumn`
 - `PoTableAction`
-- colunas com tipos `date`, `currency` e `label`
+- colunas com tipos `date`, `dateTime`, `currency` e `label`
 - seleção de linha
 - ações por linha
 - evento de ordenação
@@ -30,7 +30,7 @@ examples/angular-po-table-demo/
 
 1. Instale o PO UI no projeto Angular, conforme a documentação oficial.
 2. Copie os arquivos deste diretório para uma pasta de componente.
-3. Importe `PoModule` no módulo ou configure os imports equivalentes em standalone component, conforme a versão do projeto.
+3. O componente é standalone e importa `PoModule`; em projetos com NgModule, mova o import para o módulo.
 4. Ajuste o endpoint/backend real.
 
 ## Observação
