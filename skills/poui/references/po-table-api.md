@@ -61,7 +61,9 @@ Use Angular binding syntax when the value is not a literal string.
 | `p-unselected` | `(p-unselected)="onUnselected($event)"` | Triggered when an item is unselected. |
 | `p-sort-by` | `(p-sort-by)="onSort($event)"` | Triggered when sorting changes. |
 | `p-show-more` | `(p-show-more)="onShowMore($event)"` | Triggered when loading more data. |
-| `p-delete-items` | `(p-delete-items)="onDeleteItems($event)"` | Used when the table exposes bulk delete behavior. Validate in project version. |
+| `p-delete-items` | `(p-delete-items)="onDeleteItems($event)"` | Emitted after the bulk delete finishes. |
+| `p-all-selected` / `p-all-unselected` | `(p-all-selected)="onAllSelected($event)"` | Emitted when all rows are selected/unselected. |
+| `p-expanded` / `p-collapsed` | `(p-expanded)="onExpanded($event)"` | Emitted when a detail row opens/closes. |
 
 ## Column type mapping
 
@@ -87,20 +89,36 @@ readonly columns: Array<PoTableColumn> = [
 ];
 ```
 
-## Safe column types
+## Column types (validated against the official documentation, 2026-10-18)
 
-Commonly used column types:
+Documented values for `PoTableColumn.type`:
 
 ```text
-string/default
-label
+string (default)
+number
 currency
 date
-number
+dateTime
+time
 boolean
+label
+link
+icon
+detail
+subtitle
+cellTemplate
+columnTemplate
 ```
 
+- A date with time is `dateTime`. Using `type: 'date'` with `format: 'dd/MM/yyyy HH:mm'` is the most common mistake in examples found online.
+- `label` uses `labels: Array<PoTableColumnLabel>` with `value`, `label`, `color` and optionally `type: PoTagType` (`Danger`, `Info`, `Success`, `Warning`, `Neutral`). Prefer `type` over a fixed color: it follows the theme.
+- `cellTemplate` / `columnTemplate` require the matching directive (`p-table-cell-template`, `p-table-column-template`).
+
 Do not invent a column `type`. If the type is not known, omit `type` and render as default text.
+
+## Icons and colors
+
+Icon names (`an an-*`, `ph ph-*`, `po-icon-*`) and label colors (`color-01`..`color-12`) depend on the `@po-ui/style` version installed in the project and are **not** listed in the component documentation. Confirm them in the project before using; prefer `PoTagType` for label semantics.
 
 ## Actions
 
@@ -159,7 +177,9 @@ Preferred approach:
 @ViewChild('table') table?: PoTableComponent;
 ```
 
-Do not call methods that are not confirmed in the local reference or official documentation.
+Documented public methods of `PoTableComponent` (official documentation, 2026-10-18): `getSelectedRows()`, `getUnselectedRows()`, `unselectRows()`, `selectRowItem()`, `unselectRowItem()`, `expand(rowIndex)`, `collapse(rowIndex)`, `removeItem(item)`, `updateItem(item, updatedItem)`, `deleteItems()`, `applyFilters(queryParams)`, `applyFixedColumns()`, `updateSearchAIQuery(value, triggerSearch)`.
+
+Do not call methods that are not in this list or in the installed version's documentation.
 
 ## Recommended template
 

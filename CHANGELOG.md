@@ -2,6 +2,13 @@
 
 Todas as mudanças relevantes deste projeto serão documentadas neste arquivo.
 
+## [1.1.1] - 2026-10-18
+
+### Fixed
+
+- `po-table-api.md`: lista completa de tipos de coluna validada na documentação oficial (`dateTime`, `time`, `link`, `icon`, `detail`, `subtitle`, `cellTemplate`, `columnTemplate`); outputs `p-all-selected`, `p-all-unselected`, `p-expanded`, `p-collapsed`; lista dos métodos públicos documentados do `PoTableComponent`; aviso de que ícones e cores dependem do `@po-ui/style` instalado.
+- Exemplo Angular: coluna de data com hora passa a `dateTime`; componente convertido para standalone com `PoModule`.
+
 ## [1.1.0] - 2026-07-04
 
 ### Added

@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import {
+  PoModule,
   PoTableAction,
   PoTableColumn,
   PoTableColumnSort,
@@ -23,6 +25,8 @@ export interface PayableTitle {
 
 @Component({
   selector: 'app-payable-titles-table',
+  standalone: true,
+  imports: [CommonModule, PoModule],
   templateUrl: './payable-titles-table.component.html',
   styleUrls: ['./payable-titles-table.component.scss']
 })
@@ -68,7 +72,7 @@ export class PayableTitlesTableComponent {
       ]
     },
     { property: 'lot', label: 'Lote/Borderô' },
-    { property: 'updatedAt', label: 'Atualização', type: 'date', format: 'dd/MM/yyyy HH:mm' }
+    { property: 'updatedAt', label: 'Atualização', type: 'dateTime', format: 'dd/MM/yyyy HH:mm' }
   ];
 
   readonly actions: Array<PoTableAction> = [
